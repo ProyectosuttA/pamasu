@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAMASU</title>
+</head>
+<body>
+    <h1>PAMASU</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="#OPCION1"></a>
+            </li>            <li>
+                <a href="#OPCION2"></a>
+            </li>            <li>
+                <a href="#OPCION3"></a>
+            </li>            <li>
+                <a href="#OPCION4"></a>
+            </li>
+            {% if user.is_authenticated %}
+            <li>
+                <a href="/salir">SALIR</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="">VALORES CUANDO NO ESTAMOS LOGIADOS</a>
+            </li>                
+            {% endif %}
+        </ul>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+    
+</body>
+</html>
+-->
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'plataforma.css' %}">
+    <title>PAMASU</title>
+</head>
+<body>
+    <header>
+        <div class="user-icon">
+            <!-- Puedes reemplazar "usuario.png" con la ruta de tu icono de usuario -->
+            <a href="/salir/">
+            <img src="{% static 'images/logo.jpeg'%}" alt="Usuario">
+            </a>
+            {% if user.is_authenticated %}
+                <h5>USUARIO<br>{{ user.username }}</h5>
+            {% else %}
+                <p>No estás autenticado.</p>
+            {% endif %}
+        </div>
+    </header>
+    
+
+    <section class="contenedor-imagenes">
+        <div class="imagen-contenedor">
+            <a href="/registrar/"> <!-- Puedes reemplazar "#" con la ruta deseada -->
+                <img src="{% static 'images/logo.jpeg'%}" alt="Imagen 1">
+            </a>
+            <h2>CREAR</h2>      
+        </div>
+        <div class="imagen-contenedor">
+            <a href="/comentarios"> <!-- Puedes reemplazar "#" con la ruta deseada -->
+                <img src="{% static 'images/logo.jpeg'%}" alt="Imagen 2">
+            </a>
+            <h2>COMENTARIOS</h2>
+        </div>
+        <div class="imagen-contenedor">
+            <a href="/seguimiento/"> <!-- Puedes reemplazar "#" con la ruta deseada -->
+                <img src="{% static 'images/logo.jpeg'%}" alt="Imagen 1">
+            </a>
+            <h2>SEGUIMIENTO</h2>
+        </div>
+        <div class="imagen-contenedor">
+            <a href="/consultar/"> <!-- Puedes reemplazar "#" con la ruta deseada -->
+                <img src="{% static 'images/logo.jpeg'%}" alt="Imagen 2">
+            </a>
+            <h2>CONSULTA    </h2>
+        </div>
+        <!-- Agrega más contenedores de imágenes según sea necesario -->
+    </section>
+
+    <footer>
+        <h4>DERECHOS RECERVADOS PARA PAMASU SA DE CV</h4>
+    </footer>
+</body>
+</html>

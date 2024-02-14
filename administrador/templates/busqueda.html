@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSQUEDA</title>
+    <link rel="stylesheet" href="{% static '/busqueda.css' %}">
+    
+</head>
+<body>
+    <h1>BUSQUEDA DE CARTA PODER</h1>
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="busqueda">INGRESA LA CARTA PODER</label>
+            <input type="text" id="busqueda" name="busqueda" placeholder="Ingrese su búsqueda" required>
+            <button>BUSCAR</button>
+            <span>{{respuesta}}</span>
+        </form>
+    </div>
+</body>
+</html>

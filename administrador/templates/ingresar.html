@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INGRESAR</title>
+    <link rel="stylesheet" href="{% static 'ingresar.css' %}">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="foto-container">
+            <!-- Contenido de la foto aquí -->
+            <img src="{% static 'images/logo.jpeg' %}" alt="Usuario">
+        </div>
+        <div class="formulario-container">
+            <h1>INICIAR SESIÓN</h1>
+            <form action="/ingresar/" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <button>INICIAR</button>       
+            </form>
+            <span>{{ valor }}</span>
+        </div>
+    </div>
+<!-- <h1>INICIAR SESIÓN</h1>
+    <form action="/ingresar/" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button>INICIAR</button>       
+    </form>
+    <span>{{valor}}</span> -->
+</body>
+</html> 

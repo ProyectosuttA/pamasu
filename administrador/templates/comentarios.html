@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMENTARIOS</title>
+    <link rel="stylesheet" href="{% static '/comentarios.css'%}">   
+</head>
+<body>
+    <h1 class="titulo">COMENTARIOS</h1>
+    <div class="comentarios">
+        {% for comentario in comentarios %}
+            <h1 class="usuario">{{comentario.user}}</h1>  
+            <h2 class="comentario">{{comentario.comentario}}</h2>  
+        {% endfor %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="comentario">COMENTARIO</label>
+            <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea><br>
+            
+            <button>ENVIAR</button><br>
+            <a class="actualizar" href="/comentario/">
+                ACTUALIZAR
+             </a>   <br>
+          <a class="inicio" href="/plataforma/">
+                INICIO
+             </a>
+        
+        </form>
+    </div>
+    
+</body>
+</html>

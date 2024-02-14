@@ -1,0 +1,89 @@
+/* Reset de estilos */
+body, h1, h2, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo de la portada */
+body {
+    background-image: linear-gradient(to right, rgba(240, 240, 240, 0), rgba(146, 99, 99, 0.3)), url("images/imagen1.jpg"); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Cambia la fuente según tus preferencias */
+    color: #fff; /* Cambia el color del texto según tus necesidades */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor principal de la portada */
+.portada-container {
+    background-color: #e6e8eb4b;
+    display: flex;
+    flex-direction: column;
+    height: 75vh; /* Ajusta la altura según tus necesidades (por ejemplo, 50% de la altura de la ventana) */
+    width: 80%; /* Ajusta el ancho del contenedor principal en pantallas más pequeñas */
+    max-width: 600px; /* Limita el ancho máximo del contenedor principal */
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Cambia el color del texto según tus necesidades */
+    text-align: center;
+    border: 5px solid #e7e8f1;
+    border-radius: 10px;
+    padding: 20px; /* Añade un poco de espacio interior al contenedor principal */
+}
+
+/* Título principal */
+.titulo {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Subtítulo o descripción */
+.descripcion {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+/* Botón principal */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #fbfcfd;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media only screen and (max-width: 600px) {
+    .portada-container {
+        min-width: 90%; /* Ajusta el ancho del contenedor principal en pantallas más pequeñas */
+    }
+
+    .titulo {
+        font-size: 2.5em; /* Reduce el tamaño del título en pantallas más pequeñas */
+    }
+
+    .descripcion {
+        font-size: 1.2em; /* Reduce el tamaño del subtítulo en pantallas más pequeñas */
+    }
+
+    .boton {
+        font-size: 1em; /* Reduce el tamaño del botón en pantallas más pequeñas */
+    }
+}

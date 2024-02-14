@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear registro</title>
+    <link rel="stylesheet" href="{% static 'registrar.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body><div class="contenido">
+    <h1>CREAR EL REGISTRO</h1>
+   
+    <form action="" method="POST">
+        {% csrf_token %}
+        <!-- Inputs de tipo texto -->
+
+        <label for="texto1">INGRESA EL ID_CARTA</label>
+        <input type="text" id="id_carta" name="id_carta" required><br>
+    
+        <label for="texto2">INGRESA EL PEDIDO</label>
+        <input type="text" id="pedido" name="pedido" required><br>
+    
+        <label for="texto3">INGRESA EL FOLIO</label>
+        <input type="text" id="folio" name="folio" required><br>
+    
+        <label for="texto4">INGRESA EL ORIGEN</label>
+        <input type="text" id="origen" name="origen" required><br>
+    
+        <label for="texto5">INGRESA EL DESTINO</label>
+        <input type="text" id="destino" name="destino" required><br>
+    
+        <label for="texto6">INGRESA LAS MANIOBRAS</label>
+        <input type="text" id="maniobras" name="maniobras" required><br>
+    
+        <label for="texto7">INGRESA EL DIESEL EXTRA</label>
+        <input type="text" id="diesel" name="diesel" required><br>
+    
+        <label for="texto8">INGRESA LOS GASTOS</label>
+        <input type="text" id="gastos" name="gastos" required><br>
+
+        <div class="container">
+            <div class="form-group">
+                <label for="fecha1">Fecha de reporte:</label>
+                <input type="date" id="fecha1" name="fecha1">
+            </div>
+    
+            <div class="form-group">
+                <label for="hora1">Hora de reporte:</label>
+                <input type="time" id="hora1" name="hora1">
+            </div>
+    
+            <div class="form-group">
+                <label for="fecha2">Fecha de inicio de carga:</label>
+                <input type="date" id="fecha2" name="fecha2">
+            </div>
+    
+            <div class="form-group">
+                <label for="hora2">Hora de inicio de carga:</label>
+                <input type="time" id="hora2" name="hora2">
+            </div>
+            <div class="form-group">
+                <label for="fecha3">Fecha de termino de carga:</label>
+                <input type="date" id="fecha3" name="fecha3">
+            </div>
+    
+            <div class="form-group">
+                <label for="hora3">Hora de termino de carga:</label>
+                <input type="time" id="hora3" name="hora3">
+            </div>
+    
+            <div class="form-group">
+                <label for="fecha4">Fecha de inicio de ruta:</label>
+                <input type="date" id="fecha4" name="fecha4">
+            </div>
+    
+            <div class="form-group">
+                <label for="hora4">Hora de inicio de ruta:</label>
+                <input type="time" id="hora4" name="hora4">
+            </div>
+            <div class="form-group">
+                <label for="fecha5">Fecha de arribo al cliente:</label>
+                <input type="date" id="fecha5" name="fecha5">
+            </div>
+    
+            <div class="form-group">
+                <label for="hora5">Hora de arribo al cliente:</label>
+                <input type="time" id="hora5" name="hora5">
+            </div>
+    
+            <div class="form-group">
+                <label for="fecha6">Fecha de inicio de descarga:</label>
+                <input type="date" id="fecha6" name="fecha6">
+            </div>
+    
+            <div class="form-group">
+                <label for="hora6">Hora de inicio de descarga:</label>
+                <input type="time" id="hora6" name="hora6">
+            </div>
+            <div class="form-group">
+                <label for="fecha7">Fecha termino de descarga:</label>
+                <input type="date" id="fecha7" name="fecha7">
+            </div>
+    
+            <div class="form-group">
+                <label for="hora7">Hora termino de descarga:</label>
+                <input type="time" id="hora7" name="hora7">
+            </div>
+    
+            <div class="form-group">
+                <label for="fecha8">Fecha de termino del viaje:</label>
+                <input type="date" id="fecha8" name="fecha8">
+            </div>
+    
+            <div class="form-group">
+                <label for="hora8">Hora de termino del viaje:</label>
+                <input type="time" id="hora8" name="hora8">
+            </div>
+            <!-- Repite la estructura para las demás fechas y horas -->
+    
+        </div>
+    
+        <!-- Botón de envío -->
+        <button>ENVIAR</button>
+        <a href="/plataforma/">REGRESAR</a>
+
+      <span>{{respuesta}}</span>
+      </form>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        flatpickr("#hora1", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+
+        flatpickr("#hora2", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+
+        flatpickr("#hora3", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+        flatpickr("#hora4", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+        flatpickr("#hora5", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+
+        flatpickr("#hora6", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+
+        flatpickr("#hora7", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+        flatpickr("#hora8", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+        });
+    });
+    
+</script>
+
+
+</body>
+
+</html>

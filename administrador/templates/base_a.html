@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRADOR</title>
+</head>
+<body>
+    <h1>ADMINISTRADOR</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="#OPCION1"></a>
+            </li>            <li>
+                <a href="#OPCION2"></a>
+            </li>            <li>
+                <a href="#OPCION3"></a>
+            </li>            <li>
+                <a href="#OPCION4"></a>
+            </li>
+            {% if user.is_authenticated %}
+            <li>
+                <a href="">SALIR</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="/salir">VALORES CUANDO NO ESTAMOS LOGIADOS</a>
+            </li>                
+            {% endif %}
+        </ul>
+    </nav>
+    {% block content %}
+   
+    {% endblock %}
+    
+</body>
+</html>

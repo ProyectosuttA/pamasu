@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSULTA</title>
+    <link rel="stylesheet" href="{% static 'consultar.css'%}">
+</head>
+<body>
+    <form>
+        <h1>CONSULTA</h1>  
+         <label for="carta poder">CARTA PODER</label>
+         <input type="text" id="carta poder" name="carta poder" value="{{consultas.id_carta}}" readonly><br>
+         <label for="pedido">PEDIDO</label>
+         <input type="text" id="pedido" name="pedido" value="{{consultas.pedido}}" readonly><br>
+         <label for="folio">FOLIO</label>
+         <input type="text" id="folio" name="folio" value="{{consultas.folio}}" readonly><br>
+         <label for="folio">ORIGEN</label>
+         <input type="text" id="origen" name="origen" value="{{consultas.origen}}" readonly>
+         <br>
+         <label for="folio">DESTINO</label>
+         <input type="text" id="destino" name="destino" value="{{consultas.destino}}" readonly>
+         <br>
+         <label for="folio">MANIOBRAS</label>
+         <input type="text" id="maniobras" name="maniobras" value="{{consultas.maniobras}}" readonly>
+         <br>
+         <label for="folio">DIESEL</label>
+         <input type="text" id="diesel" name="diesel" value="{{consultas.diesel}}" readonly>
+         <br>
+         <label for="folio">GASTOS</label>
+         <input type="text" id="gastos" name="gastos" value="{{consultas.gastos}}" readonly>
+         <br>
+         <label for="reporte">HORA DE REPORTE</label>
+         <input type="text" id="reporte" name="reporte" value="{{consultas.hora_reporte}}" readonly>
+         <br>
+         <label for="reporte">INICIO DE CARGA</label>
+         <input type="text" id="carga" name="carga" value="{{consultas.inicio_carga}}" readonly>
+         <br>
+         <label for="reporte">TERMINO DE CARGA</label>
+         <input type="text" id="t_carga" name="t_carga" value="{{consultas.termino_carga}}" readonly>
+         <br>
+         <label for="reporte">INICIO DE RUTA</label>
+         <input type="text" id="ruta" name="ruta" value="{{consultas.inicio_ruta}}" readonly>
+         <br>
+         <label for="reporte">ARRIBO AL CLIENTE</label>
+         <input type="text" id="cliente" name="cliente" value="{{consultas.arribo_cliente}}" readonly>
+         <br>
+         <label for="reporte">INICIO DE DESCARGA</label>
+         <input type="text" id="i_descarga" name="i_descarga" value="{{consultas.inicio_descarga}}" readonly>
+         <br>
+         <label for="reporte">TERMINO DE DESCARGA</label>
+         <input type="text" id="t_descarga" name="t_descarga" value="{{consultas.termino_descarga}}" readonly>
+         <br>
+         <label for="reporte">TERMINO DEL VIAJE</label>
+         <input type="text" id="t_viaje" name="t_viaje" value="{{consultas.termino_viaje}}" readonly>
+         <br>
+         <a href="/plataforma/">INICIO</a>
+    </form>
+</body>
+</html>     
